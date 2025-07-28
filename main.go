@@ -752,7 +752,7 @@ func setupRoutes() *gin.Engine {
 		c.Next()
 	})
 
-	router.GET("/api/direct-urls", func(c *gin.Context) {
+	router.GET("/api/dl", func(c *gin.Context) {
 		videoURL := c.Query("url")
 		if videoURL == "" {
 			c.JSON(400, ExtractResponse{
